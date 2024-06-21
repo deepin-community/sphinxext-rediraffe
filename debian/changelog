@@ -1,5 +1,11 @@
-template-repository (1.0-1) unstable; urgency=medium
+sphinxext-rediraffe (0.2.7-2) unstable; urgency=medium
 
-  * Initial release
+  * No change source reupload to allow testing migration.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Tue, 14 Mar 2023 15:11:12 +0100
+
+sphinxext-rediraffe (0.2.7-1) unstable; urgency=medium
+
+  * Initial release (Closes: #1032949)
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Tue, 14 Mar 2023 14:08:08 +0100
