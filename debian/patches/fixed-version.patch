@@ -1,0 +1,15 @@
+Description: Make version fixed, to avoid "main" to be set as version due to missing git
+Author: Gianfranco Costamagna <locutusofborg@debian.org>
+Last-Update: 2023-03-14
+
+--- sphinxext-rediraffe-0.2.7.orig/setup.py
++++ sphinxext-rediraffe-0.2.7/setup.py
+@@ -15,7 +15,7 @@ with open("README.md", "r", encoding="ut
+ 
+ setuptools.setup(
+     name="sphinxext-rediraffe",
+-    version=version,
++    version="0.2.7",
+     author="Vasista Vovveti",
+     author_email="vasistavovveti@gmail.com",
+     description="Sphinx Extension that redirects non-existent pages to working pages.",

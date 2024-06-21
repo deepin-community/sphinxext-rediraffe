@@ -1,15 +1,28 @@
-Source: template-repository
-Section: unknown
+Source: sphinxext-rediraffe
+Maintainer: Gianfranco Costamagna <locutusofborg@debian.org>
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-setuptools,
+Standards-Version: 4.6.2
+Homepage: https://github.com/wpilibsuite/sphinxext-rediraffe
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-sphinxext-rediraffe
+Architecture: all
+Depends: ${misc:Depends},
+         ${python3:Depends},
+Description: Sphinx Extension to redirect files
+ This sphinx extension redirects non-existent pages to working pages.
+ Rediraffe can also check that deleted/renamed files in your git repo
+ are redirected.
+ .
+ Rediraffe creates a graph of all specified redirects and traverses it
+ to point all internal urls to leaf urls.
+ This means that chained redirects will be resolved.
+ For example, if a config has 6 chained redirects,
+ all 6 links will redirect directly to the final link.
+ The end user will never experience more than 1 redirection.
+ .
+ Note: Rediraffe supports the html and dirhtml builders.
